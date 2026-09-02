@@ -1,0 +1,103 @@
+Title
+
+Implementation of Linear Search and Binary Search Algorithm to Search an Element in a List
+
+Aim
+
+To implement Linear Search and Binary Search algorithms to search for a given element in a list and understand the difference in their searching techniques.
+
+Objective
+To understand the concept of searching in a list.
+To implement the Linear Search algorithm.
+To implement the Binary Search algorithm.
+To compare the efficiency of Linear Search and Binary Search.
+To determine the position of a required element in a list.
+Problem Statement
+
+Write a program to search for a given element in a list using Linear Search and Binary Search algorithms. The program should accept a list of elements and a search element as input, perform the search using both methods, and display whether the element is present in the list along with its position.
+
+Theory
+
+Searching is the process of finding a particular element in a collection of data. Two commonly used searching techniques are Linear Search and Binary Search.
+
+1. Linear Search
+
+Linear Search is a simple searching technique in which each element of the list is checked sequentially from the beginning until the required element is found or the end of the list is reached.
+
+Working:
+
+Start from the first element of the list.
+Compare the current element with the search element.
+If both are equal, the element is found.
+Otherwise, move to the next element.
+Continue until the element is found or the list ends.
+
+Time Complexity:
+
+Best Case: O(1)
+Average Case: O(n)
+Worst Case: O(n)
+
+Linear Search can be performed on both sorted and unsorted lists.
+
+2. Binary Search
+
+Binary Search is an efficient searching technique that works only on a sorted list. It repeatedly divides the search interval into two halves.
+
+Working:
+
+Find the middle element of the sorted list.
+Compare the middle element with the search element.
+If they are equal, the element is found.
+If the search element is smaller, search in the left half.
+If the search element is larger, search in the right half.
+Repeat the process until the element is found or the search interval becomes empty.
+
+Time Complexity:
+
+Best Case: O(1)
+Average Case: O(log n)
+Worst Case: O(log n)
+
+Binary Search is faster than Linear Search for large, sorted lists.
+
+Algorithm / Method
+Algorithm for Linear Search
+Start.
+Read the number of elements n.
+Read the elements of the list.
+Read the element to be searched, key.
+Set i = 0.
+Compare list[i] with key.
+If list[i] == key, display that the element is found and its position.
+Otherwise, increment i and repeat the comparison.
+If the end of the list is reached, display that the element is not found.
+Stop.
+Algorithm for Binary Search
+Start.
+Read the number of elements n.
+Read the elements of the sorted list.
+Read the element to be searched, key.
+Set low = 0 and high = n - 1.
+Calculate mid = (low + high) / 2.
+Compare list[mid] with key.
+If list[mid] == key, display that the element is found.
+If key < list[mid], set high = mid - 1.
+If key > list[mid], set low = mid + 1.
+Repeat steps 6–10 while low <= high.
+If low > high, display that the element is not found.
+Stop.
+Method
+
+The program can be implemented using the following procedure:
+
+Take a list of elements as input.
+Take the element that needs to be searched.
+Apply Linear Search to find the element sequentially.
+Arrange the list in ascending order if required for Binary Search.
+Apply Binary Search on the sorted list.
+Display the search result and position of the element.
+Compare the performance of both searching techniques based on the number of comparisons and time complexity.
+Conclusion
+
+Thus, Linear Search and Binary Search algorithms were successfully implemented to search for an element in a list. Linear Search is simple and can be used on both sorted and unsorted lists, but it may require more comparisons for large lists. Binary Search is more efficient, with a time complexity of O(log n), but it requires the list to be sorted. Therefore, Binary Search is preferable for searching large sorted datasets, while Linear Search is suitable for small or unsorted lists.
